@@ -1,13 +1,16 @@
-import React, { Component} from "react";
+import React from "react";
+import CssBaseline from '@material-ui/core/CssBaseline';
+import Container from '@material-ui/core/Container';
 
-class App extends Component{
-  render(){
+const App = () => {
     return(
-      <div className="App">
-        <h1> Hello, World! </h1>
-      </div>
+      <React.Fragment>
+        <CssBaseline />
+        <Container maxWidth="sm">
+          <h1>HELLO</h1>
+        </Container>
+      </React.Fragment>
     );
-  }
 }
 
 export default App;
