@@ -1,0 +1,24 @@
+name: MASTER_PUSH_DEPLOY
+
+on: 
+  push:
+    branches: 
+      - master
+
+jobs:
+  build:
+    name: DEPLOYING
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Pull repo
+      uses: appleboy/ssh-action@master
+      with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USER }}
+          password: ${{ secrets.PASSWD }}
+          script: cd ~/projects/wallet-frontend && git pull origin master
+    - name: Install packages
+      run: cd ~/projects/wallet-frontend && yarn install
+    - name: Build
+      run: cd ~/projects/wallet-frontend && yarn build
