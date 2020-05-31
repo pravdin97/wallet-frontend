@@ -6,11 +6,11 @@ import Container from "@material-ui/core/Container";
 import Categories from "./Categories";
 import Sidebar from "./Sidebar";
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles({
   root: {
     flexGrow: 1,
   },
-}));
+});
 
 const App = () => {
   const classes = useStyles();
