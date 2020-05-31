@@ -17,8 +17,8 @@ jobs:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USER }}
           password: ${{ secrets.PASSWD }}
-          script: cd ~/Projects/wallet-frontend && git pull origin master
-    - name: Install packages
-      run: cd ~/Projects/wallet-frontend && yarn install
-    - name: Build
-      run: cd ~/Projects/wallet-frontend && yarn build
+          script: cd ~/Projects/wallet-frontend && git pull origin master && yarn install && yarn build
+#     - name: Install packages
+#       run: cd ~/Projects/wallet-frontend && yarn install
+#     - name: Build
+#       run: cd ~/Projects/wallet-frontend && yarn build
