@@ -19,6 +19,7 @@ module.exports = {
     ],
   },
   resolve: { extensions: ["*", ".js", ".jsx"] },
+  devtool: 'eval-source-map',
   output: {
     path: path.resolve(__dirname, "dist/"),
     publicPath: "/dist/",
